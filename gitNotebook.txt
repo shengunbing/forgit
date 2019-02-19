@@ -1,0 +1,47 @@
+设置用户信息
+git config --global user.name "Shinkubin"
+git config --global user.email "zhoulei4869@outlook.com"
+
+检查配置
+git config -l 
+
+进入目标目录，并用git初始化当前目录
+cd forgit
+git init
+
+添加文件到仓库
+git add readme.txt
+git add readme_2.txt
+
+提交文件
+git commit -m "Worte 2 readme files"
+
+查看状态
+git status
+
+查看修改范围
+git diff
+
+查看commit历史
+git log
+简短信息：
+git log --pretty=oneline 
+
+
+回退到上一个版本
+git reset --hard HEAD~
+也可以指定commit ID
+git reset --hard 3750334
+回退到上个暂存区
+git reset HEAD
+
+查看过程记录
+git reflog
+
+比对当前master中的文件与工作区的文件的区别
+git diff HEAD -- readme.txt
+
+删除当前修改
+git checkout -- readme.txt
+一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
